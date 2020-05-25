@@ -16,7 +16,7 @@ a simple GET request to route /token will allow you to obtain a token.
 const axios = require('axios');
 
 let token = async () => {
-  await axios.post('http://localhost:8080/token').then((data) => {
+  await axios.post('https://maomuntai.com/token').then((data) => {
     console.log(data.data.token);
   });
 };
@@ -37,7 +37,7 @@ const axios = require('axios');
 
 let weather = async (token) => {
   await axios
-    .get('http://localhost:8080/weather', {
+    .get('https://maomuntai.com/weather', {
       headers: { Authorization: 'Bearer <INSERT TOKEN HERE>' },
     })
     .then((data) => {
