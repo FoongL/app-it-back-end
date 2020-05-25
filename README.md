@@ -16,7 +16,7 @@ a simple GET request to route /token will allow you to obtain a token.
 const axios = require('axios');
 
 let token = async () => {
-  await axios.post('https://maomuntai.com/token').then((data) => {
+  await axios.get('https://maomuntai.com/token').then((data) => {
     console.log(data.data.token);
   });
 };
