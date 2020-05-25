@@ -26,7 +26,7 @@ class WeatherRouter {
   router() {
     const router = express.Router();
     router.get('/weather', verifyToken, this.getInfo.bind(this));
-    router.post('/token', this.token.bind(this));
+    router.get('/token', this.token.bind(this));
     return router;
   }
 
