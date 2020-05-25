@@ -16,7 +16,7 @@ function verifyToken(req, res, next) {
   }
 }
 
-// Setup a JobsServices so we can use it later on
+
 class WeatherRouter {
   constructor(weatherService) {
     this.weatherService = weatherService;
@@ -31,7 +31,6 @@ class WeatherRouter {
   }
 
   getInfo(req, res) {
-    // eslint-disable-next-line consistent-return
     jwt.verify(req.token, process.env.JWT_SECRET, (err) => {
       if (err) {
         res.sendStatus(403);
